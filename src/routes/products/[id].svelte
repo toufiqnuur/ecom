@@ -40,3 +40,10 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	img {
+		aspect-ratio: 1/1;
+		object-fit: cover;
+	}
+</style>

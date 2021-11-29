@@ -71,8 +71,8 @@
 
 	<div class:hidden={!isOpen} class="md:block">
 		<div class="container flex flex-col space-y-3 p-4 md:flex-row md:space-y-0 md:space-x-3">
-			<ItemMenu href="/products/pria">Pakaian Pria</ItemMenu>
-			<ItemMenu href="/products/wanita">Pakaian wanita</ItemMenu>
+			<ItemMenu onClick={() => (isOpen = !isOpen)} href="/products/pria">Pakaian Pria</ItemMenu>
+			<ItemMenu onClick={() => (isOpen = !isOpen)} href="/products/wanita">Pakaian wanita</ItemMenu>
 		</div>
 	</div>
 </header>
