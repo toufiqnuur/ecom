@@ -9,3 +9,10 @@
 	<h3 class="text-lg mt-3 mb-2">{title}</h3>
 	<p class="font-semibold">{price}</p>
 </a>
+
+<style>
+	img {
+		aspect-ratio: 1/1;
+		object-fit: cover;
+	}
+</style>

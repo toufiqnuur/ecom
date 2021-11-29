@@ -23,13 +23,17 @@
 <section class="my-10">
 	<div class="w-full container px-4 flex space-x-6 md:justify-center overflow-x-auto">
 		<a href="/products/pria" class="flex-shrink-0 w-48 h-48 relative">
-		  <img class="category" src="/cat-pria.jpg" alt="Kategori Pria" />
-      <span class="text-white text-center absolute w-full bg-green-500 bottom-0 left-0 px-3 py-1">Kategori Pria</span>
-    </a>
+			<img class="category" src="/cat-pria.jpg" alt="Kategori Pria" />
+			<span class="text-white text-center absolute w-full bg-green-500 bottom-0 left-0 px-3 py-1"
+				>Kategori Pria</span
+			>
+		</a>
 		<a href="/products/wanita" class="flex-shrink-0 w-48 h-48 relative">
-		  <img class="category" src="/cat-wanita.jpg" alt="Kategori Pria" />
-      <span class="text-white text-center absolute w-full bg-green-500 bottom-0 left-0 px-3 py-1">Kategori Wanita</span>
-    </a>
+			<img class="category" src="/cat-wanita.jpg" alt="Kategori Pria" />
+			<span class="text-white text-center absolute w-full bg-green-500 bottom-0 left-0 px-3 py-1"
+				>Kategori Wanita</span
+			>
+		</a>
 	</div>
 </section>
 
@@ -50,7 +54,7 @@
 </section>
 
 <style>
-.category {
-  aspect-ratio: 1/1;
-}
+	.category {
+		aspect-ratio: 1/1;
+	}
 </style>
