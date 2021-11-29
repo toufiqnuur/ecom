@@ -57,4 +57,7 @@
 	.category {
 		aspect-ratio: 1/1;
 	}
+	::-webkit-scrollbar {
+		display: none;
+	}
 </style>

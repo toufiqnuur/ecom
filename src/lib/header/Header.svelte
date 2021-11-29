@@ -19,7 +19,7 @@
 	});
 </script>
 
-<header class="w-full bg-white border-b md:border-0 shadow">
+<header class="text-white w-full bg-black border-b md:border-0 shadow">
 	<div class="container flex justify-between items-center p-4">
 		<a
 			class="text-2xl text-green-500 font-bold border border-green-500 p-2"
@@ -60,7 +60,7 @@
 				<input
 					on:click={() => searchQuery.set(null)}
 					bind:this={inputElement}
-					class="border p-3 focus:outline-none focus:border-green-500"
+					class="text-black border p-3 focus:outline-none focus:border-green-500"
 					type="text"
 					value={$searchQuery}
 					placeholder="Search Products..."
