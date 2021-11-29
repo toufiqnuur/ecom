@@ -1,7 +1,7 @@
 <script>
-  export let title, price, image
+	export let title, price, image;
 
-  const slug = '/products/' + title?.split(' ').join('-').toLowerCase()
+	const slug = '/products/' + title.split(' ').join('-').toLowerCase();
 </script>
 
 <a class="group hover:border-green-500" sveltekit:prefetch href={slug}>

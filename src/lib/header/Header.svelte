@@ -1,18 +1,31 @@
 <script>
 	import ItemMenu from './ItemMenu.svelte';
+	import { searchQuery } from '../../store';
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	let isOpen = false;
 
 	let inputElement = null;
 	const handleSerach = () => {
 		inputElement.blur();
-		console.log(inputElement.value);
+		searchQuery.set(inputElement.value);
 	};
+
+	onMount(() => {
+		if ($page.path === '/search') {
+			inputElement.focus();
+		}
+	});
 </script>
 
 <header class="w-full bg-white border-b md:border-0 shadow">
 	<div class="container flex justify-between items-center p-4">
-		<a class="text-2xl text-green-500 font-bold border border-green-500 p-2" href="/">SM</a>
+		<a
+			class="text-2xl text-green-500 font-bold border border-green-500 p-2"
+			sveltekit:prefetch
+			href="/">SM</a
+		>
 		<button
 			on:click={() => (isOpen = !isOpen)}
 			class="flex items-center space-x-3 px-3 py-2 border md:hidden"
@@ -43,12 +56,16 @@
 			<span class="text-lg font-semibold">{isOpen ? 'Close' : 'Menu'}</span>
 		</button>
 		<form on:submit|preventDefault={handleSerach} class="hidden md:block">
-			<input
-				bind:this={inputElement}
-				class="border p-3 focus:outline-none focus:border-green-500"
-				type="text"
-				placeholder="Search Products..."
-			/>
+			<a sveltekit:prefetch href={$page.path == '/search' ? '' : '/search'}>
+				<input
+					on:click={() => searchQuery.set(null)}
+					bind:this={inputElement}
+					class="border p-3 focus:outline-none focus:border-green-500"
+					type="text"
+					value={$searchQuery}
+					placeholder="Search Products..."
+				/>
+			</a>
 		</form>
 	</div>
 

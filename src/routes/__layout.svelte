@@ -1,8 +1,8 @@
 <script context="module">
-	import { product } from '../store'
+	import { product } from '../store';
 	export async function load({ fetch }) {
 		const data = await (await fetch('/api/product.json')).json();
-    product.set(data)
+		product.set(data);
 		return {
 			props: {
 				data
@@ -25,8 +25,8 @@
 	<slot />
 </main>
 
-<footer class="bg-gray-300 mt-6">
-	<div class="container px-4 py-6">
-		<h2 class="text-3xl font-bold">Style MahasMahasiswa</h2>
+<footer class="bg-gray-100 mt-6">
+	<div class="container flex px-4 py-6">
+		<p>&copy; 2021. Style Mahasiswa</p>
 	</div>
 </footer>
