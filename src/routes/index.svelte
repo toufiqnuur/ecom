@@ -22,8 +22,12 @@
 
 <section class="my-10">
 	<div class="w-full container px-4 flex space-x-6 md:justify-center overflow-x-auto">
-		<div class="flex-shrink-0 w-48 h-48 border border-black">Pakaian Pria</div>
-		<div class="flex-shrink-0 w-48 h-48 border border-black">Pakaian Wanita</div>
+		<a href="/products/pria" class="flex-shrink-0 w-48 h-48 relative">
+		  <img class="category" src="/cat-pria.jpg" alt="Kategori Pria" />
+    </a>
+		<a href="/products/wanita" class="flex-shrink-0 w-48 h-48 relative">
+		  <img class="category" src="/cat-wanita.jpg" alt="Kategori Pria" />
+    </a>
 	</div>
 </section>
 
@@ -44,4 +48,7 @@
 </section>
 
 <style>
+.category {
+  aspect-ratio: 1/1;
+}
 </style>
