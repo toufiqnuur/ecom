@@ -4,7 +4,9 @@
 	import { product } from '../../store';
 
 	const pro = $product;
-	$: products = pro.data.filter((data) => data.title.includes($searchQuery));
+	$: products = pro.data.filter((data) =>
+		data.title.toLowerCase().includes($searchQuery.toLowerCase())
+	);
 </script>
 
 <svelte:head>
